@@ -12,9 +12,9 @@ Our approach utilizes deep learning steganography to create manipulated images, 
 - [ImageNet](https://www.image-net.org/download.php)
 - We adopt 10 subclasses of Imagenet (n01530575, n02123045, n01978287, n02085620, n01440764, n01675722, n01728572, n01770081, n01664065, n02114367).
 - ## Neural Network Steganography
--  [Fixed neural network teganography: Train the images, not the network](https://github.com/varshakishore/FNNS)
+-  [Fixed neural network steganography: Train the images, not the network](https://github.com/varshakishore/FNNS)
 - ## Defense methods
-- 1. Fine-pruning: Defending against back-dooring attacks on deep neural networks
+- 1. Fine-pruning: Defending against backdooring attacks on deep neural networks
 - 2. Neural cleanse: Identifying and mitigating backdoor attacks in neural networks
 - 3. STRIP: a defence against trojan attacks on deep neural networks
 - 4. Grad-cam: Visual explanations from deep networks via gradient-basedlocalization
