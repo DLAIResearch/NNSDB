@@ -78,7 +78,7 @@ def train(netC, optimizerC, schedulerC, train_dl,  identity_msg, tf_writer, epoc
     total_clean_correct = 0
     total_bd_correct = 0
     criterion_CE = torch.nn.CrossEntropyLoss().to(opt.device)
-    crop_pixels=1
+    # crop_pixels=2
     denormalizer = Denormalizer(opt)
     transforms = PostTensorTransform(opt).to(opt.device)
 
@@ -98,13 +98,12 @@ def train(netC, optimizerC, schedulerC, train_dl,  identity_msg, tf_writer, epoc
         inputs_bd1 = inputs[:num_bd]
         for i in range(num_bd):
             inputs_bd1[i]= create_FNNS_example(inputs_bd1[i],identity_msg, opt, decoder)
-        transf = trans.Compose([
-            trans.CenterCrop(opt.input_height-2),
-        ])
-        inputs_bd1=transf(inputs_bd1)
-        # path = os.path.join(opt.temps, "backdoor_image2.png")
-        # torchvision.utils.save_image(inputs_bd1, path, normalize=True)
-        inputs_bd[:, :, crop_pixels:opt.input_height - crop_pixels, crop_pixels:opt.input_height - crop_pixels]=inputs_bd1
+        #If the model only learns the triggers at the edges of the image (shortcut learning)
+        # transf = trans.Compose([
+        #     trans.CenterCrop(opt.input_height-2),
+        # ])
+        # inputs_bd1=transf(inputs_bd1)
+        # inputs_bd[:, :, crop_pixels:opt.input_height - crop_pixels, crop_pixels:opt.input_height - crop_pixels]=inputs_bd1
 
         # path = os.path.join(opt.temps, "backdoor_image1.png")
         # torchvision.utils.save_image(inputs_bd, path, normalize=True)
