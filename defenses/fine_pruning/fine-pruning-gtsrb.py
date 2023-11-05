@@ -10,7 +10,7 @@ sys.path.insert(0, "../..")
 from utils.dataloader import get_dataloader
 from utils.utils import progress_bar
 from classifier_models.preact_resnet import PreActResNet18
-from networks.models import Normalizer, Denormalizer
+from network.models import Normalizer, Denormalizer
 from steganogan import SteganoGAN
 from FNNS import create_FNNS_example
 
