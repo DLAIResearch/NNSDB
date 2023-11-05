@@ -1,6 +1,6 @@
 # NNSDB: Stealthy dynamic backdoor attack against neural networks for image classification
 Our approach utilizes deep learning steganography to create manipulated images, capitalizing on the unique sensitivity of neural networks to minute perturbations. The network is then trained de novo with these manipulated images, creating a backdoor-infused model. 
-![Image image](https://github.com/DLAIResearch/NNSDB/NNSDB.png)
+![Image image](https://github.com/DLAIResearch/NNSDB/blob/main/NNSDB.png)
 <br/>
 ## Pre-requisites
 - Pytorch 1.5 - Please install [PyTorch](https://pytorch.org/get-started/locally/) and CUDA if you don't have it installed.
