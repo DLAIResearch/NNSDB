@@ -10,7 +10,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 from utils.utils import progress_bar
-from networks.models import  Normalize, Denormalize
+from network.models import  Normalize, Denormalize
 from utils.dataloader import get_dataloader
 
 
