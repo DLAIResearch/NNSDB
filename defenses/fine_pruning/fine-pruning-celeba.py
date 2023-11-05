@@ -10,7 +10,7 @@ sys.path.insert(0, "../..")
 from utils.dataloader import get_dataloader
 from utils.utils import progress_bar
 from classifier_models import ResNet18
-from networks.models import Normalizer, Denormalizer
+from network.models import Normalizer, Denormalizer
 
 def create_targets_bd(targets, opt):
     if opt.attack_mode == "all2one":
