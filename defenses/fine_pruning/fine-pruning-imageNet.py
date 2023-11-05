@@ -4,7 +4,7 @@ import torch.nn as nn
 import copy
 import torch.nn.functional as F
 from config import get_arguments
-from networks.models import Denormalizer, Normalizer
+from network.models import Denormalizer, Normalizer
 import sys
 from steganogan import SteganoGAN
 from FNNS import create_FNNS_example
