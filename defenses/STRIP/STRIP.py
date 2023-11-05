@@ -6,7 +6,7 @@ import cv2
 import torch.nn.functional as F
 from torchvision import transforms
 from torchvision import models 
-from config import get_arguments
+from config import get_argument
 
 import sys
 
@@ -162,7 +162,7 @@ def strip(opt, mode="clean"):
     # STRIP detector
     strip_detector = STRIP(opt)
 
-    model_path = "../../celeba_1bits.steg"
+    model_path = "common_1bits.steg"
     steganogan = SteganoGAN.load(path=model_path, cuda=opt.device, verbose=False)
     decoder = steganogan.decoder.to(opt.device)
     # Entropy list
@@ -205,7 +205,7 @@ def strip(opt, mode="clean"):
 
 
 def main():
-    opt = get_arguments().parse_args()
+    opt = get_argument().parse_args()
     if opt.dataset == "celeba":
         opt.input_height = 64
         opt.input_width = 64
